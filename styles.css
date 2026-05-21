@@ -1,0 +1,245 @@
+:root {
+    --vert-fonce: #2D6A2D;
+    --vert-clair: #C8E6C9;
+    --marron-terreux: #795548;
+    --blanc-casse: #FAFAFA;
+    --orange-dore: #FF8F00;
+    --text-color: #555555;
+}
+:root {
+    --vert-fonce: #2D6A2D;
+    --vert-clair: #C8E6C9;
+    --marron-terreux: #795548;
+    --blanc-casse: #FAFAFA;
+    --orange-dore: #FF8F00;
+    --text-color: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--blanc-casse);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo h1 {
+    color: var(--vert-fonce);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--vert-fonce);
+    font-weight: 600;
+    margin-left: 25px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: var(--marron-terreux);
+}
+
+.cta-nav {
+    background-color: var(--orange-dore);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.cta-nav:hover {
+    background-color: #e67e00;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544225580-3ef372559f35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    color: white;
+    background-image: url(ecoporc_hero_background.png);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+    color: white; /* Overriding variable for readability on dark overlay */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background-color: var(--vert-fonce);
+    color: white;
+    margin-right: 15px;
+}
+
+.btn-secondary {
+    background-color: var(--orange-dore);
+    color: white;
+}
+
+/* Key Figures */
+.key-figures {
+    padding: 60px 0;
+    background-color: var(--vert-clair);
+}
+
+.key-figures .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.figure-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.figure-card h3 {
+    font-size: 2.5rem;
+    color: var(--vert-fonce);
+    margin-bottom: 5px;
+}
+
+.figure-card p {
+    font-weight: 600;
+    color: var(--marron-terreux);
+}
+
+/* About Section */
+.about {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about h2 {
+    color: var(--vert-fonce);
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--vert-fonce);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-info p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 20px;
+    }
+    .nav-item {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
